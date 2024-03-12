@@ -1,4 +1,5 @@
 // with mjs we don't have to write use strict
+import 'dayjs';
 
 function Question(text, user, date){
     this.text = text;
