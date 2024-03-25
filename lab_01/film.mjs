@@ -139,8 +139,7 @@ function FilmLibrary(p_id){
         return new Promise((resolve,reject)=>{
             const sql = 'select * from films where title like ? ';
             let res = [];
-            console.log(string);
-            db.all(sql,[string],(err,rows)=>{
+            db.all(sql,['%'+string+'%'],(err,rows)=>{
                 if (err) reject(err);
                 else{
                     for(let row of rows){
@@ -204,7 +203,7 @@ console.log(filmlib);
 console.log(filmlib.sortByDate());
 filmlib.getRated();*/
 let films = [];
-films = filmlib.retrieveTitle('Pulp');
+films = filmlib.retrieveTitle('st');
 films.then((res) => {
     for(let r of res)
         console.log(r.toString());
@@ -220,9 +219,5 @@ films.then(console.log("Operation Complete")).catch((err)=>{
 });
 */
 
-let p;
-p = filmlib.deleteFilm(6);
-
-p.then(console.log("operation completed\n")).catch((err)=>{console.log("errore", err)});
 }
 main();
