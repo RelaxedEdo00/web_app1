@@ -1,8 +1,8 @@
 {
-  "name": "lab_01",
+  "name": "qa-server",
   "version": "1.0.0",
-  "description": "film",
-  "main": "film.mjs",
+  "description": "",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

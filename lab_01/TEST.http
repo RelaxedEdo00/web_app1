@@ -1,0 +1,45 @@
+GET http://localhost:3000/films
+
+###
+
+GET http://localhost:3000/films/3
+
+###
+
+GET http://localhost:3000/films/category/unseen
+
+
+###
+
+POST http://localhost:3000/films/
+Content-Type: application/json
+
+{
+    "title":"Avatar",
+    "watchDate":"2023-04-01",
+    "rating":"5",
+    "isFavorite":"1",
+    "p_id":"1"
+}
+
+###
+
+POST http://localhost:3000/films/isFavorite/1
+Content-Type: application/json
+
+{
+    "value":"0"
+}
+
+###
+
+POST http://localhost:3000/films/rating/3
+Content-Type: application/json
+
+{
+    "value":"4"
+}
+
+###
+
+DELETE http://localhost:3000/films/7
